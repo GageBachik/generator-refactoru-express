@@ -9,11 +9,12 @@ var RefactoruHtmlGenerator = yeoman.generators.Base.extend({
   init: function () {
     this.pkg = yeoman.file.readJSON(path.join(__dirname, '../package.json'));
 
-    // this.on('end', function () {
-    //   if (!this.options['skip-install']) {
-    //     this.npmInstall();
-    //   }
-    // });
+    this.on('end', function () {
+      if (!this.options['skip-install']) {
+        this.npmInstall();
+        // TODO: npm start?
+      }
+    });
   },
 
   askFor: function () {
@@ -72,7 +73,10 @@ var RefactoruHtmlGenerator = yeoman.generators.Base.extend({
     // this.mkdir('app');
     // this.mkdir('app/templates');
 
-    this.copy('*');
+    this.directory('');
+
+    // TODO: get latest express and jade version numbers and template into package.json
+    // TODO: randomly generate port?
 
     // if(this.props.css) {
     //   this.write('main.css', '');
