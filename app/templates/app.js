@@ -4,7 +4,7 @@ var path = require('path');
 
 // configure express
 var app = express();
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || <%= 3000 + Math.floor(Math.random() * 5000) %>);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(express.favicon());
