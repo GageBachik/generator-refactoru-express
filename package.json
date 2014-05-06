@@ -1,14 +1,14 @@
 {
   "name": "generator-refactoru-express",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Yeoman generator for a basic Express app.",
   "license": "ISC",
   "main": "app/index.js",
-  "repository": "metaraine/generator-refactoru-express",
+  "repository": "refactoru/generator-refactoru-express",
   "author": {
     "name": "Raine Lourie",
     "email": "raine@refactoru.com",
-    "url": "https://github.com/metaraine"
+    "url": "https://github.com/refactoru"
   },
   "engines": {
     "node": ">=0.10.0"
