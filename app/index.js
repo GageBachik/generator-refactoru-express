@@ -73,7 +73,9 @@ var RefactoruExpressGenerator = yeoman.generators.Base.extend({
     // this.mkdir('app');
     // this.mkdir('app/templates');
 
-    this.directory('');
+    this.copy('app.js');
+    this.copy('package.json');
+    this.copy('_gitignore', '.gitignore');
 
     // TODO: get latest express and jade version numbers and template into package.json
     // TODO: randomly generate port?
