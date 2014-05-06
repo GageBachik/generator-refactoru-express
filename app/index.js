@@ -5,7 +5,7 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 
 
-var RefactoruHtmlGenerator = yeoman.generators.Base.extend({
+var RefactoruExpressGenerator = yeoman.generators.Base.extend({
   init: function () {
     this.pkg = yeoman.file.readJSON(path.join(__dirname, '../package.json'));
 
@@ -24,7 +24,7 @@ var RefactoruHtmlGenerator = yeoman.generators.Base.extend({
     console.log(this.yeoman);
 
     // replace it with a short and sweet description of your generator
-    console.log(chalk.magenta('You\'re using the fantastic RefactoruExpress generator.'));
+    console.log(chalk.magenta('You\'re using the fantastic RefactorU Express generator.'));
 
     var prompts = [
       // {
@@ -93,4 +93,4 @@ var RefactoruHtmlGenerator = yeoman.generators.Base.extend({
   },
 });
 
-module.exports = RefactoruHtmlGenerator;
+module.exports = RefactoruExpressGenerator;
