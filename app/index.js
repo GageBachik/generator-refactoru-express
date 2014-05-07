@@ -62,6 +62,10 @@ var RefactoruExpressGenerator = yeoman.generators.Base.extend({
       this.directory('views');
     }
 
+    if(this.props.static) {
+      this.mkdir('public')
+    }
+
     // if(this.props.js) {
     //   if(this.props.jquery) {
     //     this.copy('main-jquery.js', 'main.js')
