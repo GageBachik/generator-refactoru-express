@@ -26,45 +26,26 @@ var RefactoruExpressGenerator = yeoman.generators.Base.extend({
     // replace it with a short and sweet description of your generator
     console.log(chalk.magenta('You\'re using the fantastic RefactorU Express generator.'));
 
-    var prompts = [
-      // {
-      //   type: 'confirm',
-      //   name: 'bootstrap',
-      //   message: 'Twitter Bootstrap?',
-      //   default: false
-      // },
-      // {
-      //   type: 'confirm',
-      //   name: 'normalize',
-      //   message: 'Normalize.css?',
-      //   default: true,
-      //   when: function(answers) {
-      //     return !answers.bootstrap;
-      //   }
-      // },
-      // {
-      //   type: 'confirm',
-      //   name: 'css',
-      //   message: 'Include a blank main.css?',
-      //   default: true
-      // },
-      // {
-      //   type: 'confirm',
-      //   name: 'jquery',
-      //   message: 'jQuery?',
-      //   default: false
-      // },
-      // {
-      //   type: 'confirm',
-      //   name: 'js',
-      //   message: 'Include a blank main.js file?',
-      //   default: true
-      // }
-    ];
+    var prompts = [{
+      type: 'confirm',
+      name: 'jade',
+      message: 'Would you like to use Jade as your view engine?',
+      default: false
+    },{
+      type: 'confirm',
+      name: 'static',
+      message: 'Would you like to serve static files from the /public directory?',
+      default: false
+    },{
+      type: 'confirm',
+      name: 'bodyparser',
+      message: 'Will you be accessing form data from POST requests? (includes body-parser module)',
+      default: false
+    }];
 
+    // prompt the user and store the results in this.props
     this.prompt(prompts, function (props) {
       this.props = props;
-
       done();
     }.bind(this));
   },
@@ -77,12 +58,9 @@ var RefactoruExpressGenerator = yeoman.generators.Base.extend({
     this.copy('package.json');
     this.copy('_gitignore', '.gitignore');
 
-    // TODO: get latest express and jade version numbers and template into package.json
-    // TODO: randomly generate port?
-
-    // if(this.props.css) {
-    //   this.write('main.css', '');
-    // }
+    if(this.props.jade) {
+      this.directory('views');
+    }
 
     // if(this.props.js) {
     //   if(this.props.jquery) {
