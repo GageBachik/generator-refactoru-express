@@ -1,6 +1,6 @@
 {
   "name": "generator-refactoru-express",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Yeoman generator for a basic Express app.",
   "license": "ISC",
   "main": "app/index.js",
