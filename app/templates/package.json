@@ -1,7 +1,7 @@
 {
-  "dependencies": {
-    "express": "4.x"<% if(props.jade) {%>,
-    "jade": "1.x"<%}%><% if(props.bodyparser) {%>,
-    "body-parser": "1.x"<%}%>
-  }
+	"dependencies": {
+		"express": "4.x"<% if(props.jade) {%>,
+		"jade": "1.x"<%}%><% if(props.bodyparser) {%>,
+		"body-parser": "1.x"<%}%>
+	}
 }
