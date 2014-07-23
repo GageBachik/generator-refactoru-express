@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/public'));<%
 }
 
 if(props.bodyparser) {%>
-app.use(bodyParser());<%
+app.use(bodyParser.urlencoded({extended: false}));<%
 }
 %>
 
